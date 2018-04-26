@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>Express Friend Finder</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Survey Questions</h2>
+    <hr>
+    <form>
+      <div class="form-group">
+        <label for="enter-name">Name</label>
+        <input type="text" class="form-control" id="enter-name" placeholder="Enter Your Name">
+      </div>
+      <!-- end name input-->
+
+      <div class="form-group">
+        <label for="image-link">Link To Image</label>
+        <input type="url" class="form-control" id="image-link" placeholder="Submit an image">
+      </div>
+      <!-- end image input-->
+
+      <div class="mb-4">
+        <h5>
+          <label for="q-1">Question 1</label>
+        </h5>
+        <p class="lead">You love to get swoll</p>
+        <select class="custom-select w-50" id="q-1">
+          <option selected>Choose...</option>
+          <option value="1">1 (disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (agree)</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <h5>
+          <label for="q-2">Question 2</label>
+        </h5>
+        <p class="lead">You start each workout with a 5 mile run</p>
+        <select class="custom-select w-50" id="q-2">
+          <option selected>Choose...</option>
+          <option value="1">1 (disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (agree)</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <h5>
+          <label for="q-3">Question 3</label>
+        </h5>
+        <p class="lead">Forget the weights, your just here for some b-ball!</p>
+        <select class="custom-select w-50" id="q-3">
+          <option selected>Choose...</option>
+          <option value="1">1 (disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (agree)</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <h5>
+          <label for="q-4">Question 4</label>
+        </h5>
+        <p class="lead">You get your workout in nice and early</p>
+        <select class="custom-select w-50" id="q-4">
+          <option selected>Choose...</option>
+          <option value="1">1 (disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (agree)</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <h5>
+          <label for="q-5">Question 5</label>
+        </h5>
+        <p class="lead">You love a killer hike</p>
+        <select class="custom-select w-50" id="q-5">
+          <option selected>Choose...</option>
+          <option value="1">1 (disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (agree)</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <h5>
+          <label for="q-6">Question 6</label>
+        </h5>
+        <p class="lead">Your a speed king! Biking is what you do.</p>
+        <select class="custom-select w-50" id="q-6">
+          <option selected>Choose...</option>
+          <option value="1">1 (disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (agree)</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <h5>
+          <label for="q-7">Question 7</label>
+        </h5>
+        <p class="lead">You are calm and strong. You love yoga</p>
+        <select class="custom-select w-50" id="q-7">
+          <option selected>Choose...</option>
+          <option value="1">1 (disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (agree)</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <h5>
+          <label for="q-8">Question 8</label>
+        </h5>
+        <p class="lead">Your the best ping pong player your know</p>
+        <select class="custom-select w-50" id="q-8">
+          <option selected>Choose...</option>
+          <option value="1">1 (disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (agree)</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <h5>
+          <label for="q-9">Question 9</label>
+        </h5>
+        <p class="lead">Your all about the free weights</p>
+        <select class="custom-select w-50" id="q-9">
+          <option selected>Choose...</option>
+          <option value="1">1 (disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (agree)</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <h5>
+          <label for="q-10">Question 10</label>
+        </h5>
+        <p class="lead">You also like writing some JS in your spare time</p>
+        <select class="custom-select w-50" id="q-10">
+          <option selected>Choose...</option>
+          <option value="1">1 (disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (agree)</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+
+</body>
+
+</html>

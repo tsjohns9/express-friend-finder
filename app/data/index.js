@@ -26,6 +26,7 @@ const q10A = q10.options[q10.selectedIndex].value;
 
 submit.onclick = function() {
   const currentURL = window.location.origin;
+  console.log(currentURL);
   const user = { name, photo, scores: [q1A, q2A, q3A, q4A, q5A, q6A, q7A, q8A, q9A, q10A] };
 
   httpRequest = new XMLHttpRequest();

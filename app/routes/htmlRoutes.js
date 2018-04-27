@@ -10,7 +10,7 @@ module.exports = function(app) {
   });
 
   // If no matching route is found default to 404 page
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public/404.html'));
-  });
+  // app.get('*', function(req, res) {
+  //   res.sendFile(path.join(__dirname, '../public/404.html'));
+  // });
 };

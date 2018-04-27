@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#submit-form').onclick(function() {
+  $('#submit-form').on('click', function() {
     var currentURL = window.location.origin;
     console.log(currentURL);
     const name = $('#enter-name')

@@ -2,7 +2,7 @@
   "name": "express-friend-finder",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./app/data/app.js",
   "scripts": {
     "start": "node ./app/server.js"
   },

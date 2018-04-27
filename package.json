@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'This is a test'"
+    "start": "node ./app/nodserver.js"
   },
   "author": "Trevor Johnson",
   "license": "ISC",

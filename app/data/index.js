@@ -25,6 +25,7 @@ const q9A = q9.options[q9.selectedIndex].value;
 const q10A = q10.options[q10.selectedIndex].value;
 
 submit.onclick = function() {
+  const currentURL = window.location.origin;
   const user = { name, photo, scores: [q1A, q2A, q3A, q4A, q5A, q6A, q7A, q8A, q9A, q10A] };
 
   httpRequest = new XMLHttpRequest();
@@ -35,6 +36,6 @@ submit.onclick = function() {
       }
     }
   };
-  httpRequest.open('POST', '/api/friends', true);
+  httpRequest.open('POST', currentURL + '/api/friends', true);
   httpRequest.send(user);
 };

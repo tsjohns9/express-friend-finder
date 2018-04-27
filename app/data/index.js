@@ -1,42 +1,37 @@
-const q1 = document.getElementById('q-1');
-const q2 = document.getElementById('q-2');
-const q3 = document.getElementById('q-3');
-const q4 = document.getElementById('q-4');
-const q5 = document.getElementById('q-5');
-const q6 = document.getElementById('q-6');
-const q7 = document.getElementById('q-7');
-const q8 = document.getElementById('q-8');
-const q9 = document.getElementById('q-9');
-const q10 = document.getElementById('q-10');
+$(document).ready(function() {
+  $('#submit-form').onclick(function() {
+    var currentURL = window.location.origin;
+    console.log(currentURL);
+    const name = $('#enter-name')
+      .val()
+      .trim();
 
-const image = document.getElementById('image-link');
-const photo = document.getElementById('enter-name');
-const submit = document.getElementById('submit-form');
+    const photo = $('#image-link')
+      .val()
+      .trim();
 
-const q2A = q2.options[q2.selectedIndex].value;
-const q1A = q1.options[q1.selectedIndex].value;
-const q3A = q3.options[q3.selectedIndex].value;
-const q4A = q4.options[q3.selectedIndex].value;
-const q5A = q5.options[q5.selectedIndex].value;
-const q6A = q6.options[q6.selectedIndex].value;
-const q7A = q7.options[q7.selectedIndex].value;
-const q8A = q8.options[q8.selectedIndex].value;
-const q9A = q9.options[q9.selectedIndex].value;
-const q10A = q10.options[q10.selectedIndex].value;
+    // user answers for each question
+    const scores = [
+      $('#q-1').val(),
+      $('#q-2').val(),
+      $('#q-3').val(),
+      $('#q-4').val(),
+      $('#q-5').val(),
+      $('#q-6').val(),
+      $('#q-7').val(),
+      $('#q-8').val(),
+      $('#q-9').val(),
+      $('#q-10').val(),
+    ];
 
-submit.onclick = function() {
-  const currentURL = window.location.origin;
-  console.log(currentURL);
-  const user = { name, photo, scores: [q1A, q2A, q3A, q4A, q5A, q6A, q7A, q8A, q9A, q10A] };
+    const user = { name, image, scores };
 
-  httpRequest = new XMLHttpRequest();
-  httpRequest.onreadystatechange = function() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status !== 200) {
-        console.log(httpRequest.responseText);
+    $.post('/api/friends', user, function(data) {
+      if (data) {
+        console.log('Posted');
+      } else {
+        console.log('Error.');
       }
-    }
-  };
-  httpRequest.open('POST', currentURL + '/api/friends', true);
-  httpRequest.send(user);
-};
+    });
+  });
+});

@@ -1,18 +1,21 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var apiRoutes = require('./routing/apiRoutes');
-var htmlRoutes = require('./routing/htmlRoutes');
+const express = require('express');
+const bodyParser = require('body-parser');
 
-var app = express();
+const apiRoutes = require('./routing/apiRoutes');
+const htmlRoutes = require('./routing/htmlRoutes');
 
-var PORT = process.env.PORT || 8080;
+const app = express();
 
-// Sets up the Express app to handle data parsing
+// Sets up Express to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// apiRoutes(app);
-// htmlRoutes(app)
+const PORT = process.env.PORT || 8000;
+
+// passes express in to handles api routes
+apiRoutes(app);
+// passes express in to handles html routes
+htmlRoutes(app);
 
 // starts the server
 app.listen(PORT, function() {

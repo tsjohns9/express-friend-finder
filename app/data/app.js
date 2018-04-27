@@ -25,7 +25,7 @@ $(document).ready(function() {
       $('#q-10').val(),
     ];
 
-    const user = { name, image, scores };
+    const user = { name, photo, scores };
 
     $.post('/api/friends', user, function(data) {
       if (data) {

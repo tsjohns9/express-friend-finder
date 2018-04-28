@@ -1,22 +1,22 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-var path = require('path');
+const path = require('path');
 
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
 const app = express();
+const PORT = process.env.PORT || 8000;
 
 // Sets up Express to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use('/static', express.static(path.join(__dirname, '/data')));
 
-const PORT = process.env.PORT || 8000;
+// serves static js/css files
+app.use('/static', express.static(path.join(__dirname, '/public/assets')));
 
-// passes express in to handles api routes
+// passes express in to handles api and html routes
 apiRoutes(app);
-// passes express in to handles html routes
 htmlRoutes(app);
 
 // starts the server

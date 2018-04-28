@@ -1,8 +1,8 @@
 $(document).ready(function() {
+  // gets user input, and makes POST request
   $('#submit-form').on('click', function(e) {
-    e.preventDefault();
-    var currentURL = window.location.origin;
-    console.log(currentURL);
+    // e.preventDefault();
+
     const name = $('#enter-name')
       .val()
       .trim();

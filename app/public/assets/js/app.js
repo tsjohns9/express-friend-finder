@@ -30,12 +30,17 @@ $(document).ready(function() {
     $.post('/api/friends', user, function(data) {
       console.log('data: ', data);
       if (data) {
-        $('.modal-body').prepend($(`<h4>${data.name}</h4>`));
-        $('.modal-body').prepend($(`<img src="${data.photo}"></img>`));
+        $('.modal-body').append($(`<h4>${data.name}</h4>`));
+        $('.modal-body').append($(`<img src="${data.photo}"></img>`));
         $('#match-modal').modal('show');
       } else {
         console.log('Error.');
       }
+    });
+
+    // clears last matched user when modal is closed
+    $('#match-modal').on('hidden.bs.modal', function() {
+      $('.modal-body').html('');
     });
   });
 });

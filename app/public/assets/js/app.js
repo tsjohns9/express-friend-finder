@@ -3,30 +3,45 @@ $(document).ready(function() {
   $('#submit-form').on('click', function(e) {
     e.preventDefault();
 
-    const name = $('#enter-name')
-      .val()
-      .trim();
+    const user = {
+      name: $('#enter-name')
+        .val()
+        .trim(),
+      photo: $('#image-link')
+        .val()
+        .trim(),
+      scores: $.map($('.q'), index => $(index).val()),
+    };
 
-    const photo = $('#image-link')
-      .val()
-      .trim();
+    // checks for valid user post
+    validPost(user);
+  });
 
-    // user answers for each question
-    const scores = [
-      $('#q-1').val(),
-      $('#q-2').val(),
-      $('#q-3').val(),
-      $('#q-4').val(),
-      $('#q-5').val(),
-      $('#q-6').val(),
-      $('#q-7').val(),
-      $('#q-8').val(),
-      $('#q-9').val(),
-      $('#q-10').val(),
-    ];
+  // prevents form from posting when it has an empty value
+  function validPost(obj) {
+    // runs through each property in the obj
+    for (let prop in obj) {
+      const key = obj[prop];
 
-    const user = { name, photo, scores };
+      // checks if a prop is an array
+      if (Array.isArray(key)) {
+        const checkEmpty = key.find(a => a === 'Choose...');
 
+        // if the array contains an empty input, then the form wont submit
+        if (checkEmpty === 'Choose...') {
+          return false;
+        }
+      } else if (obj[prop] === '') {
+        return false;
+      }
+    }
+
+    // only runs when the user has valid input
+    return makePost(obj);
+  }
+
+  // sends the user input to the post route in apiRoutes. data returns the matched user
+  function makePost(user) {
     $.post('/api/friends', user, function(data) {
       console.log('data: ', data);
       if (data) {
@@ -37,10 +52,10 @@ $(document).ready(function() {
         console.log('Error.');
       }
     });
+  }
 
-    // clears last matched user when modal is closed
-    $('#match-modal').on('hidden.bs.modal', function() {
-      $('.modal-body').html('');
-    });
+  // clears last matched user when modal closes
+  $('#match-modal').on('hidden.bs.modal', function() {
+    $('.modal-body').html('');
   });
 });

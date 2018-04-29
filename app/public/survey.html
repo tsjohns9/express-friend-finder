@@ -13,10 +13,10 @@
 
 <body>
 
-  <div class="container my-3 py-3 border rounded">
+  <div class="container my-3">
     <h2>Survey Questions</h2>
     <hr>
-    <form>
+    <form class="p-3 border rounded">
       <div class="form-group w-50">
         <label for="enter-name">Name</label>
         <input type="text" class="form-control" id="enter-name" placeholder="Enter Your Name">
@@ -34,7 +34,7 @@
           <label for="q-1">Question 1</label>
         </h5>
         <p class="lead">You love to get swoll</p>
-        <select class="custom-select w-50" id="q-1">
+        <select class="custom-select w-50 q" id="q-1">
           <option selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
@@ -49,7 +49,7 @@
           <label for="q-2">Question 2</label>
         </h5>
         <p class="lead">You start each workout with a 5 mile run</p>
-        <select class="custom-select w-50" id="q-2">
+        <select class="custom-select w-50 q" id="q-2">
           <option selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
@@ -64,7 +64,7 @@
           <label for="q-3">Question 3</label>
         </h5>
         <p class="lead">Forget the weights, your just here for some b-ball!</p>
-        <select class="custom-select w-50" id="q-3">
+        <select class="custom-select w-50 q" id="q-3">
           <option selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
@@ -79,7 +79,7 @@
           <label for="q-4">Question 4</label>
         </h5>
         <p class="lead">You get your workout in nice and early</p>
-        <select class="custom-select w-50" id="q-4">
+        <select class="custom-select w-50 q" id="q-4">
           <option selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
@@ -94,7 +94,7 @@
           <label for="q-5">Question 5</label>
         </h5>
         <p class="lead">You love a killer hike</p>
-        <select class="custom-select w-50" id="q-5">
+        <select class="custom-select w-50 q" id="q-5">
           <option selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
@@ -109,7 +109,7 @@
           <label for="q-6">Question 6</label>
         </h5>
         <p class="lead">Your a speed king! Biking is what you do.</p>
-        <select class="custom-select w-50" id="q-6">
+        <select class="custom-select w-50 q" id="q-6">
           <option selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
@@ -124,7 +124,7 @@
           <label for="q-7">Question 7</label>
         </h5>
         <p class="lead">You are calm and strong. You love yoga</p>
-        <select class="custom-select w-50" id="q-7">
+        <select class="custom-select w-50 q" id="q-7">
           <option selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
@@ -139,7 +139,7 @@
           <label for="q-8">Question 8</label>
         </h5>
         <p class="lead">Your the best ping pong player your know</p>
-        <select class="custom-select w-50" id="q-8">
+        <select class="custom-select w-50 q" id="q-8">
           <option selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
@@ -154,7 +154,7 @@
           <label for="q-9">Question 9</label>
         </h5>
         <p class="lead">Your all about the free weights</p>
-        <select class="custom-select w-50" id="q-9">
+        <select class="custom-select w-50 q" id="q-9">
           <option selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
@@ -169,7 +169,7 @@
           <label for="q-10">Question 10</label>
         </h5>
         <p class="lead">You are also a master JS developer</p>
-        <select class="custom-select w-50" id="q-10">
+        <select class="custom-select w-50 q" id="q-10">
           <option selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
@@ -179,7 +179,18 @@
         </select>
       </div>
       <button type="submit" class="btn btn-primary" id="submit-form">Submit</button>
+      <a class="btn btn-primary" href="/" role="button">Home</a>
     </form>
+
+    <footer class="container footer p-0 mt-2 ">
+      <hr>
+      <div>
+        <p>
+          <a href="/api/friends">API Friends List</a> |
+          <a href="https://github.com/tsjohns9/express-friend-finder">GitHub Repo</a>
+        </p>
+      </div>
+    </footer>
 
     <!--Result modal-->
     <div class="modal" id="match-modal" tabindex="-1" role="dialog">
@@ -195,8 +206,7 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

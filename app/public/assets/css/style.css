@@ -9,3 +9,13 @@ h5 {
 p {
   margin-bottom: 5px;
 }
+
+.jumbotron {
+  color: white;
+  background-color: #f44336;
+}
+
+.btn-primary {
+  background-color: #01579b;
+  border-color: #01579b;
+}

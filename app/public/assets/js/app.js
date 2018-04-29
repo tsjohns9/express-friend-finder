@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // gets user input, and makes POST request
   $('#submit-form').on('click', function(e) {
-    // e.preventDefault();
+    e.preventDefault();
 
     const name = $('#enter-name')
       .val()
@@ -28,9 +28,11 @@ $(document).ready(function() {
     const user = { name, photo, scores };
 
     $.post('/api/friends', user, function(data) {
-      console.log('data:', data);
+      console.log('data: ', data);
       if (data) {
-        console.log('Posted');
+        $('.modal-body').prepend($(`<h4>${data.name}</h4>`));
+        $('.modal-body').prepend($(`<img src="${data.photo}"></img>`));
+        $('#match-modal').modal('show');
       } else {
         console.log('Error.');
       }

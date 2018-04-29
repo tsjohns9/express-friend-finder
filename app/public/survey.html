@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   <title>Express Friend Finder</title>
 </head>
 
@@ -17,25 +18,22 @@
     <h2>Survey Questions</h2>
     <hr>
     <form class="p-3 border rounded">
-      <div class="form-group w-50">
-        <label for="enter-name">Name</label>
+      <div class="form-group">
+        <label for="enter-name" class="lead">Name</label>
         <input type="text" class="form-control" id="enter-name" placeholder="Enter Your Name">
       </div>
       <!-- end name input-->
 
-      <div class="form-group w-50">
-        <label for="image-link">Link To Image</label>
+      <div class="form-group">
+        <label for="image-link" class="lead">Link To Image</label>
         <input type="url" class="form-control" id="image-link" placeholder="Submit an image">
       </div>
       <!-- end image input-->
 
       <div class="mb-4">
-        <h5>
-          <label for="q-1">Question 1</label>
-        </h5>
-        <p class="lead">You love to get swoll</p>
-        <select class="custom-select w-50 q" id="q-1">
-          <option selected>Choose...</option>
+        <p class="lead">You absolutely LOVE The Legend of Zelda</p>
+        <select class="custom-select q" id="q-1">
+          <option value="" selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -45,12 +43,9 @@
       </div>
 
       <div class="mb-4">
-        <h5>
-          <label for="q-2">Question 2</label>
-        </h5>
-        <p class="lead">You start each workout with a 5 mile run</p>
-        <select class="custom-select w-50 q" id="q-2">
-          <option selected>Choose...</option>
+        <p class="lead">You are the best Super Smash Bros player you know of</p>
+        <select class="custom-select q" id="q-2">
+          <option value="" selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -60,12 +55,9 @@
       </div>
 
       <div class="mb-4">
-        <h5>
-          <label for="q-3">Question 3</label>
-        </h5>
-        <p class="lead">Forget the weights, your just here for some b-ball!</p>
-        <select class="custom-select w-50 q" id="q-3">
-          <option selected>Choose...</option>
+        <p class="lead">Metroid Prime was way too hard as a kid</p>
+        <select class="custom-select q" id="q-3">
+          <option value="" selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -75,12 +67,9 @@
       </div>
 
       <div class="mb-4">
-        <h5>
-          <label for="q-4">Question 4</label>
-        </h5>
-        <p class="lead">You get your workout in nice and early</p>
-        <select class="custom-select w-50 q" id="q-4">
-          <option selected>Choose...</option>
+        <p class="lead">Luigi's Mansion was awesome</p>
+        <select class="custom-select q" id="q-4">
+          <option value="" selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -90,12 +79,9 @@
       </div>
 
       <div class="mb-4">
-        <h5>
-          <label for="q-5">Question 5</label>
-        </h5>
-        <p class="lead">You love a killer hike</p>
-        <select class="custom-select w-50 q" id="q-5">
-          <option selected>Choose...</option>
+        <p class="lead">You grew up on the Nintendo 64</p>
+        <select class="custom-select q" id="q-5">
+          <option value="" selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -105,12 +91,9 @@
       </div>
 
       <div class="mb-4">
-        <h5>
-          <label for="q-6">Question 6</label>
-        </h5>
-        <p class="lead">Your a speed king! Biking is what you do.</p>
-        <select class="custom-select w-50 q" id="q-6">
-          <option selected>Choose...</option>
+        <p class="lead">Banjo Kazooie was the scariest game you played as a kid</p>
+        <select class="custom-select q" id="q-6">
+          <option value="" selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -120,12 +103,9 @@
       </div>
 
       <div class="mb-4">
-        <h5>
-          <label for="q-7">Question 7</label>
-        </h5>
-        <p class="lead">You are calm and strong. You love yoga</p>
-        <select class="custom-select w-50 q" id="q-7">
-          <option selected>Choose...</option>
+        <p class="lead">You are a Mario Kart speed king</p>
+        <select class="custom-select q" id="q-7">
+          <option value="" selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -135,12 +115,9 @@
       </div>
 
       <div class="mb-4">
-        <h5>
-          <label for="q-8">Question 8</label>
-        </h5>
-        <p class="lead">Your the best ping pong player your know</p>
-        <select class="custom-select w-50 q" id="q-8">
-          <option selected>Choose...</option>
+        <p class="lead">Golden Eye was the best game ever!</p>
+        <select class="custom-select q" id="q-8">
+          <option value="" selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -150,12 +127,9 @@
       </div>
 
       <div class="mb-4">
-        <h5>
-          <label for="q-9">Question 9</label>
-        </h5>
-        <p class="lead">Your all about the free weights</p>
-        <select class="custom-select w-50 q" id="q-9">
-          <option selected>Choose...</option>
+        <p class="lead">You caught all original 151 Pokemon</p>
+        <select class="custom-select q" id="q-9">
+          <option value="" selected>Choose...</option>
           <option value="1">1 (disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -165,19 +139,17 @@
       </div>
 
       <div class="mb-4">
-        <h5>
-          <label for="q-10">Question 10</label>
-        </h5>
-        <p class="lead">You are also a master JS developer</p>
-        <select class="custom-select w-50 q" id="q-10">
-          <option selected>Choose...</option>
-          <option value="1">1 (disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (agree)</option>
+        <p class="lead">Which Nintendo 64 Game is your favorite?</p>
+        <select class="custom-select q" id="q-10">
+          <option value="" selected>Choose...</option>
+          <option value="1">Super Mario 64</option>
+          <option value="2">The Legend of Zelda: Ocarina of Time</option>
+          <option value="3">Banjo Kazooie</option>
+          <option value="4">Super Smash Bros</option>
+          <option value="5">Donkey Kong 64</option>
         </select>
       </div>
+
       <button type="submit" class="btn btn-primary" id="submit-form">Submit</button>
       <a class="btn btn-primary" href="/" role="button">Home</a>
     </form>
@@ -203,7 +175,6 @@
             </button>
           </div>
           <div class="modal-body">
-
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>

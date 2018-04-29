@@ -4,12 +4,10 @@ module.exports = function(arr1, arr2) {
   let total = 0;
   let i = 0;
 
-  // compares scores for each question.
   while (i < 10) {
     total += Math.abs(arr1[i] - arr2[i]);
     i++;
   }
 
-  // returns one number representing the current users compatibility score with one other user who submitted the form.
   return total;
 };

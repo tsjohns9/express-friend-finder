@@ -28,6 +28,7 @@ $(document).ready(function() {
     const user = { name, photo, scores };
 
     $.post('/api/friends', user, function(data) {
+      console.log('data:', data);
       if (data) {
         console.log('Posted');
       } else {

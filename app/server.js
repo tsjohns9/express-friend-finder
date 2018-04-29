@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 // serves static js/css files
 app.use('/static', express.static(path.join(__dirname, '/public/assets')));
 
-// passes express in to handles api and html routes
+// passes express in to handles routes
 apiRoutes(app);
 htmlRoutes(app);
 

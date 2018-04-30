@@ -25,7 +25,6 @@ $(document).ready(function() {
 
       // returns false if any user input is invalid.
       if ((Array.isArray(key) && key.includes('')) || key === '') {
-        $('.alert-danger').removeClass('d-none');
         alert();
         return false;
       }
